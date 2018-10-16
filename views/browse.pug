@@ -3,8 +3,10 @@ head
 body
 	div(class ='grid')
 		for movie in list.results
-			div(class= 'card')
-				img.image(src='http://image.tmdb.org/t/p/w342/'+movie.poster_path)
-				div(class= 'container')
-					h3= movie.title
-					p= movie.overview
+			div(class= 'flip-card')
+				div(class= 'flip-card-inner')
+					div(class= 'flip-card-front')
+						img.image(src='http://image.tmdb.org/t/p/w342/'+movie.poster_path)
+					div(class= 'flip-card-back')
+						h3= movie.title
+						p= movie.overview
